@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.code');
+const inputs = document.querySelectorAll('.code'); 
 
 inputs.forEach((input, index) => {
   input.addEventListener('input', (e) => {
