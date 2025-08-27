@@ -1,6 +1,6 @@
 const inputs = document.querySelectorAll('.code'); 
 
-inputs.forEach((input, index) => {
+inputs.forEach((input, indehttps://www.svgrepo.com/show/345221/three-dots.svgx) => {
   input.addEventListener('input', (e) => {
     const value = e.target.value;
     if (/^\d$/.test(value)) {
