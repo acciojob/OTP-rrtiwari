@@ -1,10 +1,12 @@
-const inputs = document.querySelectorAll('.code'); 
+const inputs = document.querySelectorAll('.code');
 
-inputs.forEach((input, indehttps://www.svgrepo.com/show/345221/three-dots.svgx) => {
+inputs.forEach((input, index) => {
   input.addEventListener('input', (e) => {
     const value = e.target.value;
     if (/^\d$/.test(value)) {
-      if (index < inputs.length - 1) inputs[index + 1].focus();
+      if (index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
     } else {
       e.target.value = '';
     }
@@ -20,10 +22,13 @@ inputs.forEach((input, indehttps://www.svgrepo.com/show/345221/three-dots.svgx) 
       } else {
         input.value = '';
       }
+      e.preventDefault();
     } else if (e.key === 'ArrowLeft') {
       if (index > 0) inputs[index - 1].focus();
+      e.preventDefault();
     } else if (e.key === 'ArrowRight') {
       if (index < inputs.length - 1) inputs[index + 1].focus();
+      e.preventDefault();
     }
   });
 });
